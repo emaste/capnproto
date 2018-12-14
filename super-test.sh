@@ -359,6 +359,7 @@ fi
 cd c++
 doit autoreconf -i
 doit ./configure --prefix="$STAGING"
+export CAPNP=./capnp
 doit make -j$PARALLEL check
 
 if [ $IS_CLANG = no ]; then

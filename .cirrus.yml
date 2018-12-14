@@ -1,0 +1,8 @@
+freebsd_instance:
+  image: freebsd-12-0-release-amd64
+
+task:
+  install_script: pkg install -y
+    autoconf automake bash git libtool perl5
+
+  script: CC=cc CXX=c++ ./super-test.sh -j2 quick
